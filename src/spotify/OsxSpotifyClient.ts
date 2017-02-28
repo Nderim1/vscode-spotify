@@ -71,6 +71,9 @@ export class OsxSpotifyClient implements SpotifyClient {
                     isShuffling: values[3] as boolean,
                     isRunning: true
                 }
+                if(!state.track.artist) {
+                    spotify.muteVolume(this._queryStatus);
+                }
                 return state;
             });
         });

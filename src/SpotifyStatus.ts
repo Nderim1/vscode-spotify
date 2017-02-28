@@ -77,6 +77,9 @@ export class SpotifyStatus {
             if (this._hidden){
                 this.redraw();
             }
+            if(!artist) {
+                this.state.state.volume = 0
+            }
         } else {
             this.redraw();
         }
